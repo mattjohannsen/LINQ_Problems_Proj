@@ -24,6 +24,7 @@ namespace LINQ_Problems
             //Console.WriteLine("This is Problem Two");
             //ProblemTwo problemTwo = new ProblemTwo();
             //var noDuplicates = problemTwo.names.Distinct();
+            //var noDuplicates = problemTwo.names.Select(s => s.Distinct());
             //foreach (var item in noDuplicates)
             //{
             //    Console.Write($"{item} ");
@@ -33,11 +34,34 @@ namespace LINQ_Problems
             //Start of Problem Three
             Console.WriteLine("This is Problem Three");
             ProblemThree problemThree = new ProblemThree();
-            var getLowestValue = problemThree.classGrades.ToList();
-            foreach (var item in getLowestValue)
+            //var turnStringToList = problemThree.classGrades.ToList();
+            foreach (var item in problemThree.classGrades)
             {
-                Console.WriteLine($"{item} ");
+                var temp = new List<int>(item.Split(',').Select(s => int.Parse(s)));
+                foreach (var item2 in temp)
+                {
+                    Console.WriteLine($"{item2}");
+                }
+                Console.WriteLine(".....");
+                //var listWithLowestRemoved = new List<int>(temp.Remove(temp.Min());
+                //foreach (var item3 in listWithLowestRemoved)
+                //{
+                //    Console.WriteLine($"{item}");
+                //}
+
             }
+            //var turnStringToList = problemThree.classGrades.ToList();
+            //turnStringToList.Select(int.Parse).ToList();
+            //var turnListToInts = turnStringToList.Select(s => int.Parse(s));
+            //var lowestValue = turnListToInts.Min();
+            //var lowestRemoved = turnListToInts.Remove(turnListToInts.Min());
+            //foreach (var item in turnStringToList)
+            //{
+
+            //    Console.Write($"{item}");
+
+            //    //Console.Write($"{item} Lowest value: {lowestValue}");
+            //}
 
             //End of Problem Three
 
