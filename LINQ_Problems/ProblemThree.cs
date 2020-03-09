@@ -8,7 +8,7 @@ namespace LINQ_Problems
 {
     class ProblemThree
     {
-        List<string> classGrades;
+        public List<string> classGrades;
 
         public ProblemThree()
         {

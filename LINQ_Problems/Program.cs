@@ -21,18 +21,23 @@ namespace LINQ_Problems
             //End of Problem One
 
             // Start of Problem Two
-            Console.WriteLine("This is Problem Two");
-            ProblemTwo problemTwo = new ProblemTwo();
-            var noDuplicates = problemTwo.names.Distinct();
-            foreach (var item in noDuplicates)
-            {
-                Console.Write($"{item} ");
-            }
+            //Console.WriteLine("This is Problem Two");
+            //ProblemTwo problemTwo = new ProblemTwo();
+            //var noDuplicates = problemTwo.names.Distinct();
+            //foreach (var item in noDuplicates)
+            //{
+            //    Console.Write($"{item} ");
+            //}
             // End of Problem Two
 
             //Start of Problem Three
-
-
+            Console.WriteLine("This is Problem Three");
+            ProblemThree problemThree = new ProblemThree();
+            var getLowestValue = problemThree.classGrades.ToList();
+            foreach (var item in getLowestValue)
+            {
+                Console.WriteLine($"{item} ");
+            }
 
             //End of Problem Three
 
