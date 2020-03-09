@@ -15,30 +15,8 @@ namespace LINQ_Problems
             words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
 
         }
-        //public GetList()
-        //{
-        //    words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
 
-        //    return words;
-        //}
-        
-        public bool CheckForTH(string input)
-        {
-            //bool a = list.Contains<int>(7);
-            //// Use instance method.
-            //bool b = list.Contains(7);
 
-            //Console.WriteLine(a);
-            //Console.WriteLine(b);
-            return false;
-        }
-        public void PrintList(List<string> inputList)
-        {
-            foreach (var input in inputList)
-            {
-                Console.Write($"{input} ");
-            }
-        }
         
     }
 }
