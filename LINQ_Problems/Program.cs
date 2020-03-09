@@ -19,9 +19,18 @@ namespace LINQ_Problems
             //    Console.Write($"{item} ");
             //}
             //End of Problem One
-            // Start of Problem Two
 
+            // Start of Problem Two
+            Console.WriteLine("This is Problem Two");
+            ProblemTwo problemTwo = new ProblemTwo();
+            var noDuplicates = problemTwo.names.Distinct();
+            foreach (var item in noDuplicates)
+            {
+                Console.Write($"{item} ");
+            }
             // End of Problem Two
+
+
             Console.ReadLine();
         }
     }
