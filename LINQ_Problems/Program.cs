@@ -21,35 +21,35 @@ namespace LINQ_Problems
             //End of Problem One
 
             // Start of Problem Two
-            //Console.WriteLine("This is Problem Two");
-            //ProblemTwo problemTwo = new ProblemTwo();
+            Console.WriteLine("This is Problem Two");
+            ProblemTwo problemTwo = new ProblemTwo();
             //var noDuplicates = problemTwo.names.Distinct();
-            //var noDuplicates = problemTwo.names.Select(s => s.Distinct());
-            //foreach (var item in noDuplicates)
-            //{
-            //    Console.Write($"{item} ");
-            //}
+            var noDuplicates = problemTwo.names.OrderBy(s => new string(s.ToCharArray())).Distinct();
+            foreach (var item in noDuplicates)
+            {
+                Console.Write($"{item} ");
+            }
             // End of Problem Two
 
             //Start of Problem Three
-            Console.WriteLine("This is Problem Three");
-            ProblemThree problemThree = new ProblemThree();
-            //var turnStringToList = problemThree.classGrades.ToList();
-            foreach (var item in problemThree.classGrades)
-            {
-                var temp = new List<int>(item.Split(',').Select(s => int.Parse(s)));
-                foreach (var item2 in temp)
-                {
-                    Console.WriteLine($"{item2}");
-                }
-                Console.WriteLine(".....");
-                //var listWithLowestRemoved = new List<int>(temp.Remove(temp.Min());
-                //foreach (var item3 in listWithLowestRemoved)
-                //{
-                //    Console.WriteLine($"{item}");
-                //}
+            //Console.WriteLine("This is Problem Three");
+            //ProblemThree problemThree = new ProblemThree();
+            ////var turnStringToList = problemThree.classGrades.ToList();
+            //foreach (var item in problemThree.classGrades)
+            //{
+            //    var temp = new List<int>(item.Split(',').Select(s => int.Parse(s)));
+            //    foreach (var item2 in temp)
+            //    {
+            //        Console.WriteLine($"{item2}");
+            //    }
+            //    Console.WriteLine(".....");
+            //    //var listWithLowestRemoved = new List<int>(temp.Remove(temp.Min());
+            //    //foreach (var item3 in listWithLowestRemoved)
+            //    //{
+            //    //    Console.WriteLine($"{item}");
+            //    //}
 
-            }
+            //}
             //var turnStringToList = problemThree.classGrades.ToList();
             //turnStringToList.Select(int.Parse).ToList();
             //var turnListToInts = turnStringToList.Select(s => int.Parse(s));
