@@ -32,39 +32,30 @@ namespace LINQ_Problems
             // End of Problem Two
 
             //Start of Problem Three
-            Console.WriteLine("This is Problem Three");
-            ProblemThree problemThree = new ProblemThree();
-            foreach (var item in problemThree.classGrades)
-            {
-                //This is the error free code so far.
-                //var temp = new List<int>(item.Split(',').Select(s => int.Parse(s)).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count));
-                //I am running into problems when I try to get an average.
-                //var temp = new List<int>(item.Split(',').Select(s => int.Parse(s)).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count));
-                var average = problemThree.classGrades.Select(g => g.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count).Average()).Average();
-                Console.WriteLine($"{average}");
-                //foreach (var item2 in average)
-                //{
-                //    Console.WriteLine($"{item2}");
-                //}
-                Console.WriteLine(".....");
-
-            }
-
-            //var turnStringToList = problemThree.classGrades.ToList();
-            //turnStringToList.Select(int.Parse).ToList();
-            //var turnListToInts = turnStringToList.Select(s => int.Parse(s));
-            //var lowestValue = turnListToInts.Min();
-            //var lowestRemoved = turnListToInts.Remove(turnListToInts.Min());
-            //foreach (var item in turnStringToList)
+            //Console.WriteLine("This is Problem Three");
+            //ProblemThree problemThree = new ProblemThree();
+            //foreach (var item in problemThree.classGrades)
             //{
-
-            //    Console.Write($"{item}");
-
-            //    //Console.Write($"{item} Lowest value: {lowestValue}");
+            //    var average = problemThree.classGrades.Select(g => g.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count).Average()).Average();
+            //    Console.WriteLine($"{average}");
+            //    Console.WriteLine(".....");
             //}
-
             //End of Problem Three
 
+            //Start of Problem Four
+            Console.WriteLine("This is Problem Four");
+            ProblemFour problemFour = new ProblemFour();
+            var stringToList = problemFour.inputString.ToList();
+            foreach (var item in stringToList)
+            {
+                Console.WriteLine($"{item}");
+            }
+            var stringListOrdered = problemFour.inputString.OrderBy(x => x).ToList();
+            foreach (var item in stringListOrdered)
+            {
+                Console.WriteLine($"{item}");
+            }
+            //End of Problem Four
             Console.ReadLine();
         }
     }
