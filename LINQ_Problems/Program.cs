@@ -32,26 +32,50 @@ namespace LINQ_Problems
             // End of Problem Two
 
             //Start of Problem Three
-            Console.WriteLine("This is Problem Three");
-            ProblemThree problemThree = new ProblemThree();
-            double returnedAverage = 0;
-            foreach (var item in problemThree.classGrades)
-            {
-                var average = problemThree.classGrades.Select(g => g.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count).Average()).Average();
-                //Console.WriteLine($"{average}");
-                //Console.WriteLine(".....");
-                returnedAverage = Convert.ToDouble(average);
-            }
-            Console.WriteLine($"{returnedAverage}");
+            //Console.WriteLine("This is Problem Three");
+            //ProblemThree problemThree = new ProblemThree();
+            //double returnedAverage = 0;
+            //foreach (var item in problemThree.classGrades)
+            //{
+            //    var average = problemThree.classGrades.Select(g => g.Split(',').Select(int.Parse).ToList().OrderByDescending(i => i).Take(problemThree.classGrades.Count).Average()).Average();
+            //    returnedAverage = Convert.ToDouble(average);
+            //}
+            //Console.WriteLine($"{returnedAverage}");
             //End of Problem Three
 
             //Start of Problem Four
-            ////Console.WriteLine("This is Problem Four");
-            ////ProblemFour problemFour = new ProblemFour();
-            ////var stringListOrdered = problemFour.inputString.OrderBy(x => x).ToArray().Count();
-            ////Console.WriteLine($"{stringListOrdered}");
-            //var stringToList = problemFour.inputString.ToList();
-            //foreach (var item in stringToList)
+            Console.WriteLine("This is Problem Four");
+            ProblemFour problemFour = new ProblemFour();
+            //var stringListOrdered = problemFour.inputString.OrderBy(x => x).ToArray().Count();
+            //var stringListOrdered = problemFour.inputString.OrderBy(x => x).ToArray().Count();
+            //Console.WriteLine($"{stringListOrdered}");
+            //List<string> theList = new List<string>();
+            var returnList = new List<string>();
+            var theList = problemFour.inputString.ToUpper().OrderBy(a => a).ToList();
+            var stringLetterFrequency = from a in theList group a by a into b select b;
+            foreach (var letterToCount in stringLetterFrequency)
+            {
+                returnList.Add(letterToCount.Key.ToString());
+                returnList.Add(letterToCount.Count().ToString());
+                //Console.Write($"{letterToCount.Key}{letterToCount.Count()}");
+            }
+            foreach (var item in returnList)
+            {
+                Console.Write($"{item}");
+            }
+
+            //var stringToList = problemFour.inputString.ToUpper().OrderBy(a => a).ToArray();
+            //var stringLetterFrequency = from a in stringToList group a by a into b select b;
+            //Console.Write("The frequency of the characters are :\n");
+            //var returnString = "";
+            //foreach (var letterToCount in stringLetterFrequency)
+            //{
+            //    Console.Write($"{letterToCount.Key}{letterToCount.Count()}");
+            //}
+            //var count = stringToList.Count(f => f ==(stringToList.Distinct()));
+            //var count = stringToList.TakeWhile(c => c == (stringToList.Distinct()).Count());
+            //var numbersForList = stringToList
+            //foreach (var item in count)
             //{
             //    Console.WriteLine($"{item}");
             //}
