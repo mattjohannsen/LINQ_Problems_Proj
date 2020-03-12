@@ -54,9 +54,11 @@ namespace LINQ_Problems
             ProblemFour problemFour = new ProblemFour();
             Console.WriteLine($"Initial string: {problemFour.inputString}");
             var returnList = new List<string>();
-            var theList = problemFour.inputString.ToUpper().OrderBy(a => a).ToList();
-            var stringLetterFrequency = from a in theList group a by a into b select b;
-            foreach (var letterToCount in stringLetterFrequency)
+            var theList = problemFour.inputString.ToUpper().OrderBy(c => c).ToList().Select(a => a).GroupBy(b => b);
+            //var stringLetterFrequency = from a in theList group a by a into b select b; // Working code
+            //var stringLetterFrequency = theList.Select(a => a).GroupBy(b=> b);
+            //Where(a=>theList.a).Group(a => a)
+            foreach (var letterToCount in theList)
             {
                 returnList.Add(letterToCount.Key.ToString());
                 returnList.Add(letterToCount.Count().ToString());
